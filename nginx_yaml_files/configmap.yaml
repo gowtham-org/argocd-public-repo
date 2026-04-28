@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: test-config
-  namespace: default
-data:
-  message: "Hello, World! This is a ConfigMap example for prune demonstration."
-  environment: "development"
