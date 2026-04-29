@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Countdown</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 80px auto; text-align: center; }
+        input { padding: 8px; margin: 8px; width: 250px; }
+        button { padding: 10px 20px; background: #e91e8c; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🎂 Birthday Countdown</h1>
+    <p>Deployed via ArgoCD on GKE!</p>
+    <form action="/submit" method="POST">
+        <label>Your Name:</label><br>
+        <input type="text" name="name" placeholder="Enter your name" required><br>
+        <label>Your Birthday:</label><br>
+        <input type="date" name="birthday" required><br><br>
+        <button type="submit">How many days?</button>
+    </form>
+</body>
+</html>

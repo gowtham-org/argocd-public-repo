@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: birthday-app-deployment
+  labels:
+    app: birthday-app
+  annotations:
+    link.argocd.argoproj.io/external-link: https://hub.docker.com/repository/docker/gowthamchowdam94/birthday-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: birthday-app
+  template:
+    metadata:
+      labels:
+        app: birthday-app
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: birthday-app
+        image: gowthamchowdam94/birthday-app:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
