@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: configmap
+metadata:
+  name: waves-demo-config
+  namespace: default
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+data:
+  APP_MESSAGE: "Hello from wave 0 Configmap!"
+  APP_COLOR: "blue"
